@@ -7,7 +7,7 @@ export const business = {
   shortName: 'ME',
   tagline: 'Earthmoving Equipment Specialists — Since 1954.',
   established: 1954,
-  logo: '/logo.png',
+  logo: '/logo.svg',
   phone: '+263 24 2447180',
   whatsapp: '+263242447180',
   email: 'info@machinery-exchange.com',
@@ -146,7 +146,7 @@ export const equipmentCategories = [
     description:
       'Genuine OEM, ITR undercarriage, Sino filters, Weichai drivelines. Same-day parts counter in Harare, countrywide courier, 4,200+ line items in stock.',
     image:
-      'https://images.unsplash.com/photo-1609205069941-b25e84583cc6?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&w=1200&q=80',
   },
 ];
 
@@ -169,7 +169,7 @@ export const featuredEquipment = [
       { label: 'Track Gauge', value: '2,000 mm' },
     ],
     image:
-      'https://images.unsplash.com/photo-1534171472267-19d28c9e5daa?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=1200&q=80',
     condition: 'New · In Stock',
     status: 'available',
   },
@@ -245,7 +245,7 @@ export const featuredEquipment = [
       { label: 'Operating Weight', value: '31,000 kg' },
     ],
     image:
-      'https://images.unsplash.com/photo-1597801037584-66f15fdee47f?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1586864387789-628af9feed72?auto=format&fit=crop&w=1200&q=80',
     condition: 'Rental · Available',
     status: 'rental',
   },
@@ -321,7 +321,7 @@ export const featuredEquipment = [
       { label: 'Blade Pull', value: '88 kN' },
     ],
     image:
-      'https://images.unsplash.com/photo-1625466996705-5c344e8f0ce0?auto=format&fit=crop&w=1200&q=80',
+      'https://images.unsplash.com/photo-1579202673506-ca3ce28943ef?auto=format&fit=crop&w=1200&q=80',
     condition: 'New · In Stock',
     status: 'available',
   },
@@ -402,7 +402,7 @@ export const services = [
       'Operator training and handover',
     ],
     image:
-      'https://images.unsplash.com/photo-1567302464248-00ea1f1c2c02?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1618044733300-9472054094ee?auto=format&fit=crop&w=1600&q=80',
   },
   {
     slug: 'rental',
@@ -418,7 +418,7 @@ export const services = [
       'Rent-to-buy conversion options',
     ],
     image:
-      'https://images.unsplash.com/photo-1581091215367-59ab6b8dee68?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80',
   },
   {
     slug: 'parts',
@@ -434,7 +434,7 @@ export const services = [
       '24-hour courier to every province',
     ],
     image:
-      'https://images.unsplash.com/photo-1609205069941-b25e84583cc6?auto=format&fit=crop&w=1600&q=80',
+      'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?auto=format&fit=crop&w=1600&q=80',
   },
   {
     slug: 'service',

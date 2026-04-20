@@ -42,7 +42,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-2 space-y-5">
             <Link to="/" className="flex items-center gap-3">
-              <img src={business.logo} alt={business.name} className="h-11 w-auto" loading="lazy" />
+              <img src={business.logo} alt={business.name} className="h-11 w-auto" loading="lazy"  onError={e => { e.currentTarget.style.display = 'none'; }} />
               <div className="leading-none">
                 <div className="font-heavy text-lg text-charcoal-50 tracking-mega uppercase">MACHINERY</div>
                 <div className="font-heavy text-lg text-safety-500 tracking-mega uppercase -mt-0.5">EXCHANGE</div>

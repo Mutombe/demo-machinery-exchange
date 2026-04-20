@@ -75,7 +75,7 @@ export default function Navbar() {
               alt={business.name}
               className="h-10 lg:h-12 w-auto shrink-0"
               loading="eager"
-            />
+             onError={e => { e.currentTarget.style.display = 'none'; }} />
             <div className="hidden sm:flex flex-col leading-none">
               <span className="font-heavy text-[15px] lg:text-[17px] text-charcoal-50 tracking-mega uppercase">
                 MACHINERY
