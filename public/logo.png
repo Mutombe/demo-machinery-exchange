@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <pattern id="hazard" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="6" height="12" fill="#FF6B00"/>
+      <rect x="6" width="6" height="12" fill="#1A1A1D"/>
+    </pattern>
+  </defs>
+  <!-- Outer frame -->
+  <rect x="4" y="4" width="112" height="112" fill="#1A1A1D" rx="2"/>
+  <rect x="8" y="8" width="104" height="6" fill="url(#hazard)"/>
+  <rect x="8" y="106" width="104" height="6" fill="url(#hazard)"/>
+
+  <!-- Gear silhouette -->
+  <g transform="translate(60,60)" fill="#FF6B00">
+    <circle r="30" fill="none" stroke="#FF6B00" stroke-width="3"/>
+    <g>
+      <rect x="-3" y="-38" width="6" height="10"/>
+      <rect x="-3" y="28" width="6" height="10"/>
+      <rect x="-38" y="-3" width="10" height="6"/>
+      <rect x="28" y="-3" width="10" height="6"/>
+      <rect x="-3" y="-38" width="6" height="10" transform="rotate(45)"/>
+      <rect x="-3" y="-38" width="6" height="10" transform="rotate(-45)"/>
+      <rect x="-3" y="-38" width="6" height="10" transform="rotate(90)"/>
+      <rect x="-3" y="-38" width="6" height="10" transform="rotate(135)"/>
+    </g>
+    <circle r="4" fill="#1A1A1D"/>
+  </g>
+
+  <!-- ME wordmark -->
+  <text x="60" y="72" text-anchor="middle" font-family="Archivo Black, Impact, sans-serif" font-size="26" font-weight="900" fill="#FFFFFF" letter-spacing="-1">ME</text>
+</svg>

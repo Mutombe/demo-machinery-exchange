@@ -1,0 +1,214 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand — dark charcoal + safety orange (industrial / heavy equipment) */
+  --color-charcoal-50:  #F5F5F6;
+  --color-charcoal-100: #E4E4E7;
+  --color-charcoal-200: #C5C5CA;
+  --color-charcoal-300: #A1A1A8;
+  --color-charcoal-400: #6F6F78;
+  --color-charcoal-500: #4A4A52;
+  --color-charcoal-600: #35353C;
+  --color-charcoal-700: #27272B;
+  --color-charcoal-800: #1A1A1D;
+  --color-charcoal-900: #0E0E10;
+  --color-charcoal-950: #060607;
+
+  /* Safety orange — primary brand accent */
+  --color-safety-50:  #FFF4EB;
+  --color-safety-100: #FFE4CC;
+  --color-safety-200: #FFC599;
+  --color-safety-300: #FFA166;
+  --color-safety-400: #FF8533;
+  --color-safety-500: #FF6B00;
+  --color-safety-600: #E55E00;
+  --color-safety-700: #B84800;
+  --color-safety-800: #8A3600;
+  --color-safety-900: #5C2400;
+
+  /* Safety yellow — caution accent */
+  --color-caution-400: #FFD933;
+  --color-caution-500: #FFD100;
+  --color-caution-600: #E6BC00;
+
+  /* Steel grey */
+  --color-steel-50:  #F4F6F8;
+  --color-steel-100: #E1E6EB;
+  --color-steel-200: #C2CCD4;
+  --color-steel-300: #93A2AE;
+  --color-steel-400: #677684;
+  --color-steel-500: #4C5864;
+
+  /* Typography */
+  --font-display: 'Barlow Condensed', 'Impact', sans-serif;
+  --font-heavy:   'Archivo Black', 'Impact', sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, monospace;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--color-charcoal-900);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-charcoal-100);
+  background: var(--color-charcoal-900);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-safety-500);
+  color: var(--color-charcoal-950);
+}
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--color-charcoal-900); }
+::-webkit-scrollbar-thumb { background: var(--color-charcoal-600); border: 2px solid var(--color-charcoal-900); }
+::-webkit-scrollbar-thumb:hover { background: var(--color-safety-500); }
+
+.font-display { font-family: var(--font-display); }
+.font-heavy   { font-family: var(--font-heavy); }
+.font-body    { font-family: var(--font-body); }
+.font-mono    { font-family: var(--font-mono); }
+
+.text-balance { text-wrap: balance; }
+.text-pretty  { text-wrap: pretty; }
+
+/* Hazard stripe — subtle diagonal caution tape */
+.hazard-stripe {
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--color-safety-500) 0px,
+    var(--color-safety-500) 12px,
+    var(--color-charcoal-900) 12px,
+    var(--color-charcoal-900) 24px
+  );
+}
+
+.hazard-stripe-thin {
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--color-safety-500) 0px,
+    var(--color-safety-500) 6px,
+    var(--color-charcoal-950) 6px,
+    var(--color-charcoal-950) 12px
+  );
+}
+
+/* Metal grid blueprint background */
+.blueprint-grid {
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Fine grain texture */
+.grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+}
+
+.steel-plate {
+  background:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.04) 0%, transparent 50%),
+    radial-gradient(circle at 80% 70%, rgba(255,255,255,0.03) 0%, transparent 60%),
+    var(--color-charcoal-800);
+}
+
+.brushed-metal {
+  background:
+    linear-gradient(90deg,
+      transparent 0%,
+      rgba(255,255,255,0.02) 20%,
+      transparent 40%,
+      rgba(255,255,255,0.015) 60%,
+      transparent 80%,
+      rgba(255,255,255,0.02) 100%),
+    var(--color-charcoal-700);
+}
+
+/* Rivets / bolt corners */
+.rivet-corners {
+  position: relative;
+}
+.rivet-corners::before,
+.rivet-corners::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--color-safety-500);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--color-charcoal-800);
+}
+.rivet-corners::before { top: 10px; left: 10px; }
+.rivet-corners::after { bottom: 10px; right: 10px; }
+
+/* Glow */
+.safety-glow {
+  box-shadow:
+    0 0 0 1px rgba(255, 107, 0, 0.4),
+    0 0 30px rgba(255, 107, 0, 0.35),
+    0 8px 40px rgba(0, 0, 0, 0.45);
+}
+
+.inset-shadow {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), inset 0 -1px 0 rgba(0,0,0,0.35);
+}
+
+@keyframes scroll-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes pulse-safety {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+@keyframes track-shift {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(6px); }
+}
+
+.animate-marquee { animation: scroll-marquee 45s linear infinite; }
+.animate-pulse-safety { animation: pulse-safety 1.8s ease-in-out infinite; }
+
+:focus-visible {
+  outline: 2px solid var(--color-safety-500);
+  outline-offset: 2px;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+  .clip-corners {
+    clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+  }
+  .clip-notch {
+    clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+  }
+  .tracking-mega { letter-spacing: -0.04em; }
+  .tracking-widest-2 { letter-spacing: 0.2em; }
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+}
